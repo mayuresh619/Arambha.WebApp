@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+      </div>
+<!--header section end -->
+<!-- contact section start -->
+<div class="contact_section layout_padding margin_top90">
+    <div class="container">
+        <h1 class="contact_taital">Get In Touch</h1>
+        <p class="contact_text">
+            In order to meet the needs of each and every client, AARAMBH HOSPITALITY SERVICES is dedicated to offering the best hospitality solutions. We are the go-to option for companies and people searching for a trustworthy and effective hospitality partner because of our wide range of services, skilled staff of experts, and first-rate customer service. Contact us right now to learn more about our offerings and how we can help you with your hospitality needs.
+            <br>Stop looking here and there and just AARAMBH your event with AARAMBH HOSPITALITY SERVICE, but how??
+            <br>Don't worry,
+            <br>Here's  how you can
+            <br>AARAMBH HOSPITALITY SERVICES
+            <br>ADDRESS: Shop No.1,16, Victory Mansion, S T Road, Mahim, Mumbai -400016
+            <br>TAMIL NADU BRANCH
+            <br>AARAMBH HOSPITALITY SERVICES
+            <br>CH - 15, OLD NO. 22 AND NEW NO.64, Alandur Road,
+            <br>Saidapet, Chennai, Chennai, Tamil Nadu, 600015
+            <br>
+            <br>Dial Us Here
+            <br>9167235755/9820480815
+            <br>Find us here!!
+            <br>prasanna.shetty@ahs.net.in/ info@ahs.net.in
+        </p>
+        <div class="contact_section_2 layout_padding">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact_main">
+                        <input type="text" id ="name" class="mail_text" placeholder="Full Name" name="Full Name">
+                        <input type="text" id="phone" class="mail_text" placeholder="Phone Number" name="Phone Number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                        <input type="text" id="emailid" class="mail_text" placeholder="Email" name="Email">
+                        <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Message"></textarea>
+                        <div class="send_bt"><a id="send_button" href="javascript:MailSending()">SEND</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="map_main">
+                        <div class="map-responsive">
+                            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contact section end -->
+<script>
+    function MailSending() {
+        debugger;
+        if ($("#name").val() == '') {
+            alert('Enter name');
+            return;
+        }
+        if ($("#phone").val() == '') {
+            alert('Enter Phone number');
+            return;
+        }
+        if ($("#emailid").val() == '') {
+            alert('Enter Email ID');
+            return;
+        }
+
+        $.ajax({
+            type: "GET",
+            url: 'SendMail?name=' + $("#name").val() + "&phonenumber=" + $("#phone").val() + "&emailid=" + $("#emailid").val() + "&message=" + $('#comment').val(),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            async: false,
+            cache: false,
+            success: function () {
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+            }
+        });
+        alert('Inquiry send successfully');
+
+    }
+</script>
