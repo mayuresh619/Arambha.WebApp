@@ -68,15 +68,15 @@ namespace Arambha.WebApp.Controllers
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-            mail.From = new MailAddress("mayuresh.vedak619@gmail.com");
-            mail.To.Add("mayureshvedak@yahoo.com");
+            mail.From = new MailAddress("customercare@ahs.net.in");
+            mail.To.Add("desk.aarambh@gmail.com");
             mail.Subject = "Arambha new inquiry from "+name;
             mail.Body = Mailbody;
             mail.IsBodyHtml = true;
 
             SmtpServer.Port = 587;
             SmtpServer.UseDefaultCredentials = false;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("mayuresh.vedak619@gmail.com", "wkiduzaiosupsnwr");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("customercare@ahs.net.in", "hshmwwuektsxjice");
             SmtpServer.EnableSsl = true;
 
             SmtpServer.Send(mail);
