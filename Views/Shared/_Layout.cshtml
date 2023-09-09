@@ -29,36 +29,43 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
     <!-- owl stylesheets -->
     <link rel="stylesheet" href="~/Content/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/Content/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 </head>
 <body>
     <!--header section start -->
+    <div class="fixed-image">
+        <a href="http://wa.me/919820480815" target="_blank">
+            <img src="~/Content/images/WhatsAppLogo.png" alt="Fixed Image">
+        </a>
+    </div>
     <div class="header_section">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="logo"><a href="~/Home/Index"><img src="~/Content/images/logo.png"></a></div>
+            <div class="logo"><a href="~/"><img src="~/Content/images/logo.png"></a></div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="~/Home/Index">Home</a>
+                        <a class="nav-link" href="~/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="~/Home/About">About Us</a>
+                        <a class="nav-link" href="~/About">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="~/Home/Services">Services</a>
+                        <a class="nav-link" href="~/Services">Services</a>
                     </li>
                     @*<li class="nav-item">
-            <a class="nav-link" href="~/Home/Blogs">Blog</a>
-        </li>*@
+                            <a class="nav-link" href="~/Home/Blogs">Blog</a>
+                        </li>*@
                     <li class="nav-item">
-                        <a class="nav-link" href="~/Home/Events">Our Clients</a>
+                        <a class="nav-link" href="~/Clients">Our Clients</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="~/Home/Contact">Contact Us</a>
+                        <a class="nav-link" href="~/CertificatesPage">Our Certification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Contact">Contact Us</a>
                     </li>
                 </ul>
                 @*<form class="form-inline my-2 my-lg-0">
@@ -73,15 +80,16 @@
         <div class="footer_section layout_padding">
             <div class="container">
                 <div class="location_main">
-                    <div class="location_text"><img src="~/Content/images/map-icon.png"><span class="padding_left_10">Shop No.1,16, Victory Mansion, S T Road, Mahim, Mumbai -400016</span></div>
-                    <div class="location_text center"><img src="~/Content/images/call-icon.png"><span class="padding_left_10"><a href="tel:+919167235755">9167235755</a> / <a href="tel:+919820480815">9820480815</a></span></div>
-                    <div class="location_text right"><img src="~/Content/images/mail-icon.png"><span class="padding_left_10"><a href="mailto:prasanna.shetty@ahs.net.in">prasanna.shetty@ahs.net.in</a> / <a href="mailto:info@ahs.net.in">info@ahs.net.in</a></span></div>
+                    @*<div class="location_text"><img src="~/Content/images/map-icon.png"><span class="padding_left_10">Shop No.1,16, Victory Mansion, S T Road, Mahim, Mumbai -400016</span></div>*@
+                    @*<div class="location_text center"><img src="~/Content/images/call-icon.png"><span class="padding_left_10"><a href="tel:+919167235755">9167235755</a> / <a href="tel:+919820480815">9820480815</a></span></div>*@
+                    <div class="location_text left"><img src="~/Content/images/call-icon.png"><span class="padding_left_10"><a href="tel:+919167235755">9167235755</a> / <a href="tel:+919820480815">9820480815</a></span></div>
+                    <div class="location_text center"><img src="~/Content/images/mail-icon.png"><span class="padding_left_10"><a href="mailto:info@ahs.net.in">info@ahs.net.in</a></span></div>
                 </div>
                 <div class="footer_section_2">
                     <div class="row">
                         <div class="col-lg-6">
                             <h2 class="footer_taital">About</h2>
-                            <p class="footer_text">AARAMBH HOSPITALITY SERVICES (AHS) Est.2019 (ISO 9001:2015 ) is a leading hospitality service provider committed to delivering exceptional experiences</p>
+                            <p class="footer_text">AARAMBH HOSPITALITY SERVICES (AHS) Est.2019 (ISO 9001:2015 and OHSAS 18001:2007) is a leading hospitality service provider committed to delivering exceptional experiences</p>
                         </div>
                         <div class="col-lg-6">
                             <h2 class="footer_taital">Our Vision</h2>
@@ -113,7 +121,6 @@
             </div>
         </div>
         <!-- footer section end -->
-
         <!-- Javascript files-->
         <script src="~/Content/js/jquery.min.js"></script>
         <script src="~/Content/js/bootstrap.bundle.min.js"></script>

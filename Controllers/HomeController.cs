@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net.Mail;
 using System.Web;
@@ -9,11 +10,13 @@ namespace Arambha.WebApp.Controllers
 {
     public class HomeController : Controller
     {
+        [Route("~/")]
         public ActionResult Index()
         {
             return View();
         }
 
+        [Route("About")]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -21,6 +24,7 @@ namespace Arambha.WebApp.Controllers
             return View();
         }
 
+        [Route("Contact")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -28,6 +32,7 @@ namespace Arambha.WebApp.Controllers
             return View();
         }
 
+        [Route("Services")]
         public ActionResult Services()
         {
             ViewBag.Message = "Your contact page.";
@@ -35,15 +40,26 @@ namespace Arambha.WebApp.Controllers
             return View();
         }
 
-        public ActionResult Events()
+        [Route("Clients")]
+        public ActionResult Clients()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
+
+        [Route("Blogs")]
         public ActionResult Blogs()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        [Route("CertificatesPage")]
+        public ActionResult CertificatesPage()
+        {
+            ViewBag.Message = "Your Certificates page.";
 
             return View();
         }
@@ -66,21 +82,28 @@ namespace Arambha.WebApp.Controllers
                 "</tr>" +
                 "</table> ";
             MailMessage mail = new MailMessage();
-            SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+            SmtpClient SmtpServer = new SmtpClient(ConfigurationManager.AppSettings["Mailsmtp"].ToString());
 
             mail.From = new MailAddress("customercare@ahs.net.in");
-            mail.To.Add("desk.aarambh@gmail.com");
+            mail.To.Add(ConfigurationManager.AppSettings["MailTo"].ToString());
             mail.Subject = "Arambha new inquiry from "+name;
             mail.Body = Mailbody;
             mail.IsBodyHtml = true;
 
-            SmtpServer.Port = 587;
+            SmtpServer.Port = Convert.ToInt32(ConfigurationManager.AppSettings["MailPort"].ToString());
             SmtpServer.UseDefaultCredentials = false;
             SmtpServer.Credentials = new System.Net.NetworkCredential("customercare@ahs.net.in", "hshmwwuektsxjice");
-            SmtpServer.EnableSsl = true;
+            SmtpServer.EnableSsl = Convert.ToBoolean(ConfigurationManager.AppSettings["MailEnableSSL"]);
+            try
+            {
+                SmtpServer.Send(mail);
+                return Json("Inquiry sent successfully", JsonRequestBehavior.AllowGet);
 
-            SmtpServer.Send(mail);
-            return Json("Successfully Sent");
+            }
+            catch (Exception ex)
+            {
+                return Json(ex.Message, JsonRequestBehavior.AllowGet);
+            }
         }
 
     }

@@ -20,8 +20,7 @@
 @import url(meanmenu.css);
 @import url(owl.carousel.min.css);
 @import url(swiper.min.css);
-@import url(slick.css);
-@import url(jquery.fancybox.min.css);
+@import url(slick.csscontact_section @import url(jquery.fancybox.min.css);
 @import url(jquery-ui.css);
 @import url(nice-select.css);
 
@@ -240,18 +239,18 @@ button {
     padding-right: 15px;
     padding-left: 15px;
     font-size: 18px;
-    color: #acabab;
+    color: #000;
     text-transform: uppercase;
 }
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #de4930;
+    color: #e99419;
 }
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show > .nav-link {
-    color: #de4930;
+    color: #e99419;
 }
 .logo{ 
     width: 25%;
@@ -273,7 +272,7 @@ button {
 .banner_section {
     padding-top: 40px;
     padding-bottom: 70px;
-    border-bottom: 80px solid #de4930;
+    border-bottom: 80px solid #e99419;
 }
 .banner_main {
     width: 44%;
@@ -286,7 +285,7 @@ button {
     width: 100%;
     float: left;
     font-size: 48px;
-    color: #de4930;
+    color: #e99419;
     font-weight: bold;
 }
 .banner_text {
@@ -317,11 +316,11 @@ button {
 }
 .contact_bt a:hover {
     color: #ffffff;
-    background-color: #de4930;
+    background-color: #e99419;
 }
 .contact_bt.active a {
     color: #ffffff;
-    background-color: #de4930;
+    background-color: #e99419;
 }
 .readmore_bt {
     width: 170px;
@@ -341,7 +340,7 @@ button {
 }
 .readmore_bt a:hover {
     color: #ffffff;
-    background-color: #de4930;
+    background-color: #e99419;
 }
 
 .carousel-indicators {
@@ -383,7 +382,7 @@ button {
     position: absolute;
     width: 100px;
     height: 390px;
-    background-color: #de4930;
+    background-color: #e99419;
     left: 0px;
     right: initial;
     top: 0;
@@ -448,7 +447,7 @@ button {
 }
 .read_bt a:hover {
     color: #ffffff;
-    background-color: #de4930;
+    background-color: #e99419;
 }
 
 /* about section end */
@@ -500,7 +499,7 @@ button {
 .selection_text {
     width: 100%;
     font-size: 20px;
-    color: #de4930;
+    color: #e99419;
     font-weight: bold;
     padding-top: 20px;
     font-family: 'Roboto', sans-serif;
@@ -510,6 +509,7 @@ button {
     font-size: 15px;
     color: #0f0f0f;
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* services section end */
@@ -630,7 +630,7 @@ button {
 }
 .seemore_bt a:hover {
     color: #ffffff;
-    background-color: #de4930;
+    background-color: #e99419;
 }
 
 /* events section end */
@@ -640,7 +640,6 @@ button {
 .contact_section {
     width: 100%;
     float: left;
-    background-image: url(../images/contact-bg.png);
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
@@ -667,10 +666,10 @@ button {
 .contact_text {
     width: 100%;
     float: left;
-    font-size: 16px;
-    color: #ffffff;
+    font-size: 21px;
+    color: #000000;
     margin: 0px;
-   font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .contact_section_2{
     width: 100%;
@@ -681,18 +680,18 @@ button {
     width: 100%;
     float: left;
     font-size: 16px;
-    color: #727272;
+    color: #000;
     border: 0px;
-    background-color: #ffff;
+    background-color: #e99419;
     padding: 15px;
     margin-top: 20px;
-   font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 input.mail_text::placeholder {
-    color: #727272;
+    color: #ffffff;
 }
 .massage-bt {
-    color: #727272;
+    color: #000;
     width: 100%;
     font-size: 18px;
     background-color: #ffff;
@@ -703,7 +702,7 @@ input.mail_text::placeholder {
    font-family: 'Roboto', sans-serif;
 }
 textarea#comment::placeholder {
-    color: #727272;
+    color: #ffffff;
 }
 .map_main{
     width: 100%;
@@ -715,11 +714,12 @@ textarea#comment::placeholder {
     width: 150px;
     float: left;
     margin-top: 40px;
+    margin-bottom : 40px;
 }
 .send_bt a {
     width: 100%;
     float: left;
-    background-color: #de4930;
+    background-color: #e99419;
     color: #ffffff;
     text-align: center;
     padding: 14px 0px;
@@ -774,7 +774,7 @@ textarea#comment::placeholder {
     width: 100%;
     font-size: 20px;
     text-transform: uppercase;
-    color: #de4930;
+    color: #e99419;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
 }
@@ -799,7 +799,7 @@ textarea#comment::placeholder {
 }
 
 .testimonial_box:hover{
-    background-color: #de4930;
+    background-color: #e99419;
 }
 .testimonial_box:hover .dummy_text{
     color: #ffffff;
@@ -829,7 +829,7 @@ textarea#comment::placeholder {
 
 #my_carousel .carousel-indicators .active {
     width: 50px;
-    background-color: #de4930;
+    background-color: #e99419;
 }
 
 .margin_top90{
@@ -934,7 +934,7 @@ textarea#comment::placeholder {
     width: 100%;
     float: left;
     font-size: 20px;
-    color: #de4930;
+    color: #e99419;
     background-color: transparent;
     text-transform: uppercase;
 }
@@ -943,31 +943,9 @@ textarea#comment::placeholder {
 }
 /* footer section end */
 
-
-/* copyright section start */
-
-.copyright_section {
-    width: 100%;
-    float: left;
-    background-color: #1d1d1d;
-    height: auto;
+.fixed-image {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    z-index: 999; /* Set a high z-index to ensure it's above other elements */
 }
-.copyright_text {
-    width: 100%;
-    float: left;
-    font-size: 16px;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0px;
-    margin: 0px;
-}
-
-.copyright_text a {
-    color: #ffffff;
-}
-.copyright_text a:hover {
-    color: #de4930;
-}
-
-
-/* copyright section end */
